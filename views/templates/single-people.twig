@@ -1,0 +1,15 @@
+{% block content %}
+    <article>
+        <div>
+            <h1>{{ post.title }}</h1>
+            
+            {% if post.thumbnail %}
+                <img src="{{ post.thumbnail.src('medium') }}" alt="{{ post.title }}">
+            {% endif %}
+
+            <div>
+                {{ post.content }}
+            </div>
+        </div>
+    </article>
+{% endblock %}
